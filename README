@@ -1,0 +1,30 @@
+# Parses Kindle's "My Clippings.txt" file for highlights and notes
+# (skips bookmarks) and groups them by book/title, ordered by location.
+# Highlights start with "-", notes start with '*'
+# A UTF-8 encoded file is created: ordered_clippings.txt
+#
+# Sample input (My Clippings.txt):
+#
+# 97_Things_Every_Programmer_Should_Know
+# - Highlight Loc. 250-51  | Added on Wednesday, December 29, 2010, 06:10 AM
+# 
+# As soon as you make the decision to compromise, write a task card or log it
+# ==========
+# 97_Things_Every_Programmer_Should_Know
+# - Highlight Loc. 298  | Added on Wednesday, December 29, 2010, 06:19 AM
+# 
+# the best way to capture requirements is to watch users.
+# ==========
+# 97_Things_Every_Programmer_Should_Know
+# - Note Loc. 1453  | Added on Sunday, January 02, 2011, 09:40 PM
+# 
+# this is a personal note
+# ==========
+#
+# Sample output ordered_clippings.txt):
+#
+# 97_Things_Every_Programmer_Should_Know
+# --------------------------------------
+# - As soon as you make the decision to compromise, write a task card or log it
+# - the best way to capture requirements is to watch users.
+# * this is a personal note
